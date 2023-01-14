@@ -1,0 +1,210 @@
+body[id="#app"]{
+    width: 100%;
+    height: 100vh;
+    margin: 0px 0px 0px 0px;
+    display: block;
+    overflow-x: hidden;
+}
+.form_account_box {
+    width: 800px;
+    max-width: 90%;
+    height: 400px;
+    max-height: 100%;
+    background-color: #4266E5;
+    -moz-border-radius: 5px 5px 5px 5px;
+    -webkit-border-radius: 5px 5px 5px 5px;
+    border-radius: 5px 5px 5px 5px;
+    transform: translate(0%, -50%);
+    top: 50%;
+    left: 0px;
+    right: 0px;
+    margin: 0 auto;
+    position: absolute;
+    -moz-box-shadow: 0px 0px 19px #b3b3b3;
+    -webkit-box-shadow: 0px 0px 19px #b3b3b3;
+    box-shadow: 0px 0px 19px #b3b3b3;
+}
+.form_account_box > svg {
+    position: absolute;
+    z-index: 1;
+    top: 30px;
+}
+.form_account_box_ghraphic_effect1 {
+    -moz-animation-name: ShakeUp;
+    -o-animation-name: ShakeUp;
+    -webkit-animation-name: ShakeUp;
+    animation-name: ShakeUp;
+    -moz-animation-duration: 10s;
+    -o-animation-duration: 10s;
+    -webkit-animation-duration: 10s;
+    animation-duration: 10s;
+    -moz-animation-iteration-count: infinite;
+    -o-animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -moz-animation-fill-mode: both;
+    -o-animation-fill-mode: both;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    width: 80px;
+    height: 80px;
+    background-color: transparent;
+    border: 7px solid #ffffff;
+    position: absolute;
+    -moz-border-radius: 50% 50% 50% 50%;
+    -webkit-border-radius: 50% 50% 50% 50%;
+    border-radius: 50% 50% 50% 50%;
+    z-index: 1;
+    bottom: 0px;
+    left: 30px;
+    opacity: 0.1;
+}
+.form_account_box_ghraphic_effect2 {
+    width: 60px;
+    height: 60px;
+    background-color: transparent;
+    border: 5px solid #ffffff;
+    position: absolute;
+    -moz-border-radius: 50% 50% 50% 50%;
+    -webkit-border-radius: 50% 50% 50% 50%;
+    border-radius: 50% 50% 50% 50%;
+    z-index: 1;
+    top: 30px;
+    right: 30px;
+    opacity: 0.1;
+}
+.form_selection_box {
+    position: relative;
+    width: 100%;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    height: 50px;
+    -moz-border-radius: 5px 5px 0px 0px;
+    -webkit-border-radius: 5px 5px 0px 0px;
+    border-radius: 5px 5px 0px 0px;
+}
+.form_selection_box > button {
+    border: 0px solid transparent;
+    width: 50%;
+    max-width: 50%;
+    height: 100%;
+    -moz-border-radius: 5px 5px 0px 0px;
+    -webkit-border-radius: 5px 5px 0px 0px;
+    border-radius: 5px 5px 0px 0px;
+    -moz-transition: 0.4s;
+    -o-transition: 0.4s;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+    background-color: rgb(46 ,175 ,172);
+    color: rgb(255,255,255);
+    font-family: 'Comic Sans MS';
+    font-size: 18px;
+}
+.form_selection_box > button:focus-within{
+    filter: brightness(90%);
+}
+.form_selection_box > button:first-child {
+    -moz-border-radius: 5px 0px 0px 0px;
+    -webkit-border-radius: 5px 0px 0px 0px;
+    border-radius: 5px 0px 0px 0px;
+    cursor: pointer;
+}
+.form_selection_box > button:last-child {
+    -moz-border-radius: 0px 5px 0px 0px;
+    -webkit-border-radius: 0px 5px 0px 0px;
+    border-radius: 0px 5px 0px 0px;
+    cursor: pointer;
+}
+.form_selection_box > button:hover{
+    filter: brightness(90%);
+    cursor: pointer;
+}
+.dd_form {
+    overflow-y: auto;
+    position: relative;
+    width: 100%;
+    height: 400px;
+    background-color: rgb(33,195,192);
+    -moz-border-radius: 0px 0px 5px 5px;
+    -webkit-border-radius: 0px 0px 5px 5px;
+    border-radius: 0px 0px 5px 5px;
+    text-align: center;
+}
+#dd_form_login {
+    display: block;
+}
+#dd_form_register {
+    display: none;
+}
+#dd_form_forget_password{
+    display: none;
+}
+.dd_form > .dd_form_controller > input {
+    display: block;
+    margin: 20px auto;
+    text-align: left;
+    width: 700px;
+    max-width: 80%;
+    padding: 15px;
+    outline: none;
+    border: 0 solid transparent;
+    -moz-border-radius: 27px 27px 27px 27px;
+    -webkit-border-radius: 27px 27px 27px 27px;
+    border-radius: 27px 27px 27px 27px;
+    font-size: 16px;
+    font-family: 'Comic Sans MS',sans-serif;
+}
+.dd_form > .dd_form_controller > input:focus {
+    filter: brightness(97%);
+}
+.dd_form_controller {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    max-width: 100%;
+    height: 100%;
+    max-height: max-content;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+}
+.dd_form_controller > button[type="submit"] {
+     padding: 10px;
+    display: inline;
+    cursor: pointer;
+    margin-bottom: 20px;
+    outline: none;
+    border: 0px solid transparent;
+    -moz-border-radius: 5px 5px 5px 5px;
+    -webkit-border-radius: 5px 5px 5px 5px;
+    border-radius: 5px 5px 5px 5px;
+    background-color: rgb(255,255,255);
+    color: rgb(30,30,30);
+    font-size: 18px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif,sans-serif;
+}
+.dd_form_controller > button[type="submit"]:hover{
+    filter: brightness(95%);
+    cursor: pointer;
+}
+.register_form_link,.login_form_link {
+    position: absolute;
+    bottom: 10px;
+    font-size: 16px;
+    font-family: 'Comic Sans MS',sans-serif;
+    margin-top: 10px;
+    display: block;.
+    text-decoration: none;
+    color: rgb(255,255,255);
+    text-decoration-color: #ffffff;
+}

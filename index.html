@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en-us" contenteditable="false">
+<head>
+    <meta charset="utf-8" />
+    <!-- Theme -->
+    <link type="text/css" rel="stylesheet" href="contents/assets/theme/app.css" />
+    <link type="text/css" rel="stylesheet" href="contents/assets/theme/index.css" />
+    <title>
+        ToBeech
+    </title>
+</head>
+<body lang="en-us" dir="ltr" contenteditable="false" id="app">
+    <div class="container">
+        <form class="form_account_box" action="" method="post" enctype="multipart/form-data" draggable="false" aria-label="UserTestFormBox">
+            <div class="form_selection_box">
+                <button type="button" autofocus tabindex="1" onclick="Show_Login_Form_Page()">Login</button>
+                <button type="button" tabindex="2" onclick="Show_Register_Form_Page()">Register</button>
+            </div>
+            <div class="form_account_box_ghraphic_effect1"></div>
+            <div class="form_account_box_ghraphic_effect2"></div>
+            <div class="dd_form" id="dd_form_login">
+                <div class="dd_form_controller">
+                    <input type="text" name="lusername" placeholder="Username, email address, phone number, .." autocomplete="off" tabindex="3" border="0" />
+                    <input type="password" name="lpassword" placeholder="Enter password.." autocomplete="off" tabindex="4" border="0" />
+                    <button type="submit" name="lloginbtn" value="Login" tabindex="5">
+                        Let's start
+                    </button>
+                    <a href="javascript:void(0)" onclick="Show_Forget_Password_Form_Page()" class="register_form_link" tabindex="6">
+                        Do you lost your account password?
+                    </a>
+                </div>
+            </div>
+            <div class="dd_form" id="dd_form_register">
+                <div class="dd_form_controller">
+                    <input type="text" placeholder="Username, email address, phone number, .." autocomplete="off" tabindex="7" border="0" />
+                    <input type="password" name="rusername" placeholder="Enter password.." autocomplete="off" tabindex="8" border="0" />
+                    <input type="password" name="rpassword" placeholder="Repeat password.." autocomplete="off" tabindex="9" border="0" />
+                    <button type="submit" name="rregisterbtn" value="Register" tabindex="10">
+                        Register
+                    </button>
+                    <a href="javascript:void(0)" class="login_form_link" onclick="Show_Login_Form_Page()" tabindex="11">
+                        Login to an existing account
+                    </a>
+                </div>
+            </div>
+            <div class="dd_form" id="dd_form_forget_password">
+                <div class="dd_form_controller">
+                    <input type="text" name="fpassword" placeholder="Username, email address, phone number, .." autocomplete="off" tabindex="7" border="0" />
+                    <button type="submit" name="fpasswordbtn" value="Confirm" tabindex="11">
+                        Confirm
+                    </button>
+                    <a href="javascript:void(0)" class="login_form_link" onclick="Show_Login_Form_Page()" tabindex="11">
+                        Login to an existing account
+                    </a>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <script type="text/javascript" async src="contents/assets/script/app.js"></script>
+</body>
+</html>
