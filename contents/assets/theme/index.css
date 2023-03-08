@@ -83,7 +83,7 @@ body[id="#app"]{
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: space-between;
-    height: 50px;
+    height: 60px;
     -moz-border-radius: 5px 5px 0px 0px;
     -webkit-border-radius: 5px 5px 0px 0px;
     border-radius: 5px 5px 0px 0px;
@@ -100,13 +100,15 @@ body[id="#app"]{
     -o-transition: 0.4s;
     -webkit-transition: 0.4s;
     transition: 0.4s;
-    background-color: rgb(46 ,175 ,172);
+    background-color: var(--webpage-default-background-color);
+    border-bottom: 1.4px solid rgba(65, 97, 209,0.3);
     color: rgb(255,255,255);
     font-family: 'Comic Sans MS';
     font-size: 18px;
 }
 .form_selection_box > button:focus-within{
     filter: brightness(90%);
+    border: 1.4px solid transparent;
 }
 .form_selection_box > button:first-child {
     -moz-border-radius: 5px 0px 0px 0px;
@@ -129,7 +131,7 @@ body[id="#app"]{
     position: relative;
     width: 100%;
     height: 400px;
-    background-color: rgb(33,195,192);
+    background-color: var(--webpage-default-background-color);
     -moz-border-radius: 0px 0px 5px 5px;
     -webkit-border-radius: 0px 0px 5px 5px;
     border-radius: 0px 0px 5px 5px;

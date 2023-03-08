@@ -1,0 +1,247 @@
+/* typical phone screen resolution */
+@media only screen and (max-width : 786px) {
+    body {
+        margin: 0px 0px 0px 0px;
+        padding: 0px 0px 0px 0px;
+        overflow-x: hidden;
+    }
+        /* HIDDEN BODY SCROLLBAR IN MOBILE SCREEN RESOLUTION*/
+        body[id="profile"]::-webkit-scrollbar {
+            width: 0px;
+        }
+    /* __START MOBILE MENU NAVIGATION BAR */
+    .mobile_menu {
+        display: flex;
+        position: sticky;
+        bottom: 0px;
+        left: 0px;
+        padding-top: 3px;
+        width: 100%;
+        max-width: 100%;
+        height: 60px;
+        background-color: #4400ff;
+    }
+
+    .mobile_menu_item {
+        -moz-border-radius: 50px 50px 50px 50px;
+        -webkit-border-radius: 50px 50px 50px 50px;
+        border-radius: 50px 50px 50px 50px;
+        display: flex;
+        flex-direction: row;
+        padding: 0px 0px 0px 0px;
+        list-style: none;
+        width: 100%;
+        max-width: 100%;
+        align-content: center;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: nowrap;
+    }
+
+        .mobile_menu_item > li > a > svg {
+            padding: 5px;
+            background-color: transparent;
+            -moz-transition: all 0.4s ease-in;
+            -o-transition: all 0.4s ease-in;
+            -webkit-transition: all 0.4s ease-in;
+            transition: all 0.4s ease-in;
+            -moz-transform: scale(1);
+            -ms-transform: scale(1);
+            -o-transform: scale(1);
+            -webkit-transform: scale(1);
+            transform: scale(1);
+            fill: var(--webpage-default-screen-color);
+        }
+
+        .mobile_menu_item > li > a > svg:hover {
+            fill: #ffffff;
+            -moz-transform: scale(1.1);
+            -ms-transform: scale(1.1);
+            -o-transform: scale(1.1);
+            -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+            background-color: transparent;
+            -moz-transition: all 0.4s ease-in-out;
+            -o-transition: all 0.4s ease-in-out;
+            -webkit-transition: all 0.4s ease-in-out;
+            transition: all 0.4s ease-in-out;
+        }
+    #show_online_random_user_box_n389x238 {
+        position: absolute;
+        background-color: #4400ff;
+        margin: 0 auto;
+        left: 0px;
+        right: 0px;
+        margin: 0 auto;
+        outline: 3.5px solid #fff;
+        outline-color: #fff;
+        outline-offset: 0px;
+        top: 0%;
+        -moz-transform: translate(50%,-50%);
+        -ms-transform: translate(50%,-50%);
+        -o-transform: translate(50%,-50%);
+        -webkit-transform: translate(50%,-50%);
+        transform: translate(0%,-50%);
+        -moz-border-radius: 50px 50px 50px 50px;
+        -webkit-border-radius: 50px 50px 50px 50px;
+        border-radius: 50px 50px 50px 50px;
+    }
+        .mobile_menu_item > li > a {
+            text-decoration: none;
+        }
+
+    /* __END MOBILE MENU NAVIGATION BAR */
+
+    /* MESSAGE BOX INBOX PROPERTY */
+    ul[id="message_box_inbox_client_data_item"] > li:hover {
+        background-color: rgb(245,245,245);
+        cursor: pointer;
+    }
+    #message_box_inbox_client_data_item {
+        position: relative;
+        display: flex;
+        height: unset;
+        list-style: none;
+        padding: 0px 0px 0px 0px;
+        margin: 0px 0px 0px 0px;
+        width: 100%;
+        max-width: 100%;
+        background-color: var(--webpage-default-screen-color);
+        overflow-x: hidden;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        -moz-transition: 0.4s;
+        -o-transition: 0.4s;
+        -webkit-transition: 0.4s;
+        transition: 0.4s;
+        align-items: stretch;
+    }
+    /* MESSAGE BOX INBOX ITEM IMAGE */
+    .message_box_inbox_client_data_profile_image {
+        max-inline-size: none;
+        clip-path: circle(100%);
+        -moz-border-radius: 50px 50px 50px 50px;
+        -webkit-border-radius: 50px 50px 50px 50px;
+        border-radius: 50px 50px 50px 50px;
+        margin-left: 10px;
+        position: relative;
+        border: 2px solid transparent; /*#23dd3b*/
+    }
+    /* MESSAGE BOX INBOX ITEM USERNAME */
+    .message_box_inbox_client_data_item_profile > p {
+        margin-left: 5px;
+    }
+
+    .message_box_inbox_client_data_item_options > svg:last-child {
+        margin-right: 10px;
+    }
+    /* MESSAGE BOX INBOX ITEMS */
+    ul[id="message_box_inbox_client_data_item"] > li {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        align-content: center;
+        flex-wrap: nowrap;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    /* MESSAGE BOX INBOX ITEMS ICONS */
+    .message_box_inbox_client_data_profile_verify_account_icon {
+        top: 0.5px;
+    }
+    /* MAIN MESSAGE BOX PROPERTY */
+    .message_box_inbox_client_data_message_controller {
+        display: none;
+    }
+    /* DELETE MESSAGE POPUP PROPERTY */
+    #qr_popup_window {
+        width: 100%;
+        max-width: 100%;
+        -moz-border-radius: 0px 0px 0px 0px;
+        -webkit-border-radius: 0px 0px 0px 0px;
+        border-radius: 0px 0px 0px 0px;
+    }
+    /* DELETE MESSAGE BOX POPUP WINDOW */
+    #delete_message {
+        padding: 10px;
+        width: 60%
+    }
+
+        #delete_message > p {
+            font-size: 11px;
+        }
+        /* DELETE MESSAGE BOX POPUP WINDOW BUTTONS */
+        #delete_message > button {
+            font-family: var(--webpage-default-font-name);
+            font-size: 11px;
+            width: 60px;
+            height: 30px;
+            border: 0px solid transparent;
+            -moz-border-radius: 5px 5px 5px 5px;
+            -webkit-border-radius: 5px 5px 5px 5px;
+            border-radius: 5px 5px 5px 5px;
+            -moz-transition: 0.3s;
+            -o-transition: 0.3s;
+            -webkit-transition: 0.3s;
+            transition: 0.3s;
+        }
+        /* MESSAGEBOX INBOX MESSAGES */
+    .message_box_inbox_client_data_message_chat > div > p{
+        font-size: 16px;
+    }
+    /* MESSAGE BOX INBOX NAVBART TOP */
+    .message_box_navbar_top_list > li > svg {
+        width: 20px;
+        height: 20px;
+    }
+    .message_box_inbox_client_data_message_form_box {
+        animation: FadeInDown 2s 1;
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+        display: flex;
+        max-width: 100%;
+        width: 100%;
+        background-color: var(--webpage-default-screen-color);
+        align-items: center;
+        align-content: center;
+        flex-wrap: nowrap;
+        flex-direction: row;
+        height: 45px;
+    }
+    .message_inbox_emoji_box_for_input_list {
+        bottom: 52.5px;
+        right: 5px;
+    }
+    .message_box_inbox_client_data_message_form_box > .message_box_inbox_client_data_message_form_box_button {
+        padding: 12.5px;
+    }
+    .message_box_inbox_client_data_message_form_box > section > svg {
+        width: 25px;
+        height: 20px;
+
+    }
+    #back_up_main_chat_list {
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+        display: flex;
+        margin-left: 10px;
+        margin-right: 5px;
+        background-color: transparent;
+        -moz-border-radius: 6px 6px 6px 6px;
+        -webkit-border-radius: 6px 6px 6px 6px;
+        border-radius: 6px 6px 6px 6px;
+        -moz-transition: all 0.2s ease-in;
+        -o-transition: all 0.2s ease-in;
+        -webkit-transition: all 0.2s ease-in;
+        transition: all 0.2s ease-in;
+    }
+    
+}
+/* landscape orientation */
+@media only screen and (min-width : 375px) and (max-width : 667px) and (orientation : landscape) {
+}
+/* portrait orientation */
+@media only screen and (min-width : 375px) and (max-width : 667px) and (orientation : portrait) {
+}
