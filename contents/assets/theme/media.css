@@ -1,9 +1,9 @@
 /* typical phone screen resolution */
 @media only screen and (max-width : 786px) {
-    body {
+    body[id="profile"] {
         margin: 0px 0px 0px 0px;
         padding: 0px 0px 0px 0px;
-        overflow-x: hidden;
+        overflow: auto;
     }
         /* HIDDEN BODY SCROLLBAR IN MOBILE SCREEN RESOLUTION*/
         body[id="profile"]::-webkit-scrollbar {
@@ -72,7 +72,7 @@
         margin: 0 auto;
         left: 0px;
         right: 0px;
-        margin: 0 auto;
+        box-shadow: 0px 0px 0px 3.5px #ffffff;
         outline: 3.5px solid #fff;
         outline-color: #fff;
         outline-offset: 0px;
@@ -186,10 +186,24 @@
             transition: 0.3s;
         }
         /* MESSAGEBOX INBOX MESSAGES */
-    .message_box_inbox_client_data_message_chat > div > p{
-        font-size: 16px;
+    .message_box_inbox_client_data_message_chat > div > span{
+        font-size: 13px;
     }
     /* MESSAGE BOX INBOX NAVBART TOP */
+    .more_message_box_navbar_top_list > ul[id="more_message_box_navbar_top_items"]{
+        width: 150px;
+    }
+    .more_message_box_navbar_top_list {
+        padding: 5px 5px 5px 5px;
+    }
+    .more_message_box_navbar_top_list > ul[id="more_message_box_navbar_top_items"] > li{
+        padding: 10px 10px 10px 10px;
+        font-size: 13px;
+    }
+    .more_message_box_navbar_top_list > ul[id="more_message_box_navbar_top_items"] > li > svg{
+        width: 20px;
+        height: 20px;
+    }
     .message_box_navbar_top_list > li > svg {
         width: 20px;
         height: 20px;
@@ -208,6 +222,23 @@
         flex-wrap: nowrap;
         flex-direction: row;
         height: 45px;
+    }
+    .message_box_inbox_client_data_message_chat_server > span:last-child {
+        -moz-border-radius: 5px 5px 0px 5px;
+        -webkit-border-radius: 5px 5px 0px 5px;
+        border-radius: 5px 5px 0px 5px;
+    }
+    .message_box_inbox_client_data_message_chat_server > span:last-child::after {
+        position: absolute;
+        content: "";
+        width: 7px;
+        height: 5px;
+        right: -2px;
+        bottom: 0px;
+        background-color: #ffffff;
+        -moz-border-radius: 0px 7px 0px 0px;
+        -webkit-border-radius: 0px 7px 0px 0px;
+        border-radius: 0px 7px 1px 0px;
     }
     .message_inbox_emoji_box_for_input_list {
         bottom: 52.5px;
@@ -237,7 +268,113 @@
         -webkit-transition: all 0.2s ease-in;
         transition: all 0.2s ease-in;
     }
-    
+    /* QR WINDOW */
+    .popup_window{
+        padding: 0px 0px 0px 0px;
+    }
+    .popup_window::-webkit-scrollbar{
+        width: 0px;
+    }
+    .popup_window_frame_title{
+        margin-top: 12px;
+        font-size: 25px;
+    }
+    .message_box_inbox_client_data_client_username_controller{
+        font-size: 25px;
+    }
+    .popup_window_user_id > svg{
+        width: 25px;
+        height: 25px;
+    }
+    #close_popup_window, #close_emoji_box, #close_view_profile_window, #open_view_profile_submenus {
+        width: 20px;
+        height: 20px;
+        padding: 2px 2px 2px 2px;
+        -moz-border-radius: 5px 5px 5px 5px;
+        -webkit-border-radius: 5px 5px 5px 5px;
+        border-radius: 5px 5px 5px 5px;
+    }
+    /* PROFILE VIEW WINDOW*/
+        #close_view_profile_window{
+            margin-left: 10px;
+            margin-top: 10px;
+        }
+    #open_view_profile_submenus{
+        margin-right: 10px;
+        margin-top: 10px;
+    }
+    #view_profile_window {
+        width: 100%;
+        max-width: 100%;
+        -moz-border-radius: 0px 0px 0px 0px;
+        -webkit-border-radius: 0px 0px 0px 0px;
+        border-radius: 0px 0px 0px 0px;
+    }
+    .view_profile_menus {
+        -moz-box-shadow: inset 0px 0px 1px #d4d4d4;
+        -webkit-box-shadow: inset 0px 0px 1px #d4d4d4;
+        box-shadow: inset 0px 0px 1px #d4d4d4;
+        right: 10px;
+        padding: 5px 5px 5px 5px;
+    }
+    .view_profile_menus > li{
+        font-size: 12px;
+    }
+    .view_profile_menus > li > svg{
+        width: 20px;
+        height: 20px;
+    }
+    .view_profile_field_box > textarea {
+        background-color: rgba(245,245,245);
+        -moz-appearance: none;
+        resize: none;
+        -webkit-appearance: none;
+        appearance: none;
+        padding: 8px 8px 8px 8px;
+        font-family: var(--webpage-default-font-name);
+        height: 150px;
+        width: 100%;
+        font-size: 12px;
+        outline: none;
+        border: 0px solid transparent;
+        -moz-border-radius: 5px 5px 5px 5px;
+        -webkit-border-radius: 5px 5px 5px 5px;
+        border-radius: 5px 5px 5px 5px;
+    }
+    .view_profile_field_box > input {
+        -webkit-appearance: none;
+        appearance: none;
+        padding: 8px 8px 8px 8px;
+        font-size: 12px;
+    }
+    .view_profile_field_box > .view_profile_report_button {
+        border: 0px solid transparent;
+        background-color: rgb(220, 14, 45);
+        -moz-appearance: none;
+        -webkit-appearance: none;
+        width: 100%;
+        appearance: none;
+        color: var(--webpage-default-screen-color);
+        padding: 8px 8px 8px 8px;
+        font-family: var(--webpage-default-font-name);
+        font-size: 16px;
+        outline: none;
+        border: 0px solid transparent;
+        -moz-border-radius: 5px 5px 5px 5px;
+        -webkit-border-radius: 5px 5px 5px 5px;
+        border-radius: 5px 5px 5px 5px;
+        cursor: pointer;
+        -moz-box-shadow: inset 0px -3px 0px 0px rgb(179 20 44);
+        -webkit-box-shadow: inset 0px -3px 0px 0px rgb(179 20 44);
+        box-shadow: inset 0px -3px 0px 0px rgb(179 20 44);
+        -moz-transition: 0.3s;
+        -o-transition: 0.3s;
+        -webkit-transition: 0.3s;
+        transition: 0.3s;
+    }
+    .view_profile_username_box > span{
+        font-size: 22px;
+    }
 }
 /* landscape orientation */
 @media only screen and (min-width : 375px) and (max-width : 667px) and (orientation : landscape) {

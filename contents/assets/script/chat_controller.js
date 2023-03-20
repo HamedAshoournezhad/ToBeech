@@ -30,14 +30,14 @@ function setMessageBoxScrollController() {
 class chat_controller {
   constructor() {
     console.log("Service started!");
-    }
+  }
   // Fullscreen Function
   fullScreen() {
     // Fullscreen Controller For Message Box
     $("#fullScreen").click(function () {
       if (fullscreen_xmn3nx836 == 0) {
         if (document.exitFullscreen) {
-            document.exitFullscreen();
+          document.exitFullscreen();
           fullscreen_xmn3nx836 = 1;
         } else if (document.webkitExitFullscreen) {
           document.webkitExitFullscreen();
@@ -58,7 +58,7 @@ class chat_controller {
           document.webkitFullscreenEnabled ||
           document.msFullscreenEnabled
         ) {
-           if (document.body.requestFullscreen) {
+          if (document.body.requestFullscreen) {
             document.body.requestFullscreen();
             fullscreen_xmn3nx836 = 0;
           } else if (document.body.webkitRequestFullscreen) {
@@ -166,23 +166,23 @@ class chat_controller {
               "value"
             ] == "message_box_inbox_client_data_message_chat_server"
           ) {
-            var paragraph_cn289x83 = document.createElement("span");
-            paragraph_cn289x83.innerText = $(
-              "#message_box_inbox_client_data_message_form_box_input"
-            ).val();
-            if (
-              document
-                .getElementById(
-                  "message_box_inbox_client_data_message_form_box_input"
-                )
-                .value.trimStart()
-            ) {
-              mbicdmcs_cj38x2nmx.append(paragraph_cn289x83);
-              $("#message_box_inbox_client_data_message_form_box_input").val(
-                null
-              );
-              setMessageBoxScrollController();
-            }
+              var paragraph_cn289x83 = document.createElement("span");
+              paragraph_cn289x83.innerText = $(
+                "#message_box_inbox_client_data_message_form_box_input"
+              ).val();
+              if (
+                document
+                  .getElementById(
+                    "message_box_inbox_client_data_message_form_box_input"
+                  )
+                  .value.trimStart()
+              ) {
+                mbicdmcs_cj38x2nmx.append(paragraph_cn289x83);
+                $("#message_box_inbox_client_data_message_form_box_input").val(
+                  null
+                );
+                setMessageBoxScrollController();
+              }
           }
         }
       }
@@ -205,7 +205,7 @@ class chat_controller {
       $("#qr_popup_window").css("display", "inherit");
       if ($(".message_inbox_emoji_box_for_input_list").css("display", "flex")) {
         $(".message_inbox_emoji_box_for_input_list").css("display", "none");
-        }
+      }
       $("#delete_message").css("display", "none");
       $("#view_profile_window").css("display", "none");
       Isopen_view_profile_submenus = false;
@@ -255,18 +255,18 @@ class chat_controller {
       $(".message_inbox_emoji_box_for_input_list").css("display", "none");
     });
     $(".message_box_inbox_delete_all_data").click(function () {
-        $("#delete_message").css("display", "inherit");
-        $("#view_profile_window").css("display", "none");
-        menu_list_x983nx83 = 1;
-        $("#more_message_box_navbar_top_list").css({
-            visibility: "hidden",
-            "z-index": "-99",
-            "animation-name": "unset",
-            opacity: "0"
-        });
-        $("#qr_popup_window").css("display", "none");
-        $(".message_inbox_emoji_box_for_input_list").css("display", "none");
-    })
+      $("#delete_message").css("display", "inherit");
+      $("#view_profile_window").css("display", "none");
+      menu_list_x983nx83 = 1;
+      $("#more_message_box_navbar_top_list").css({
+        visibility: "hidden",
+        "z-index": "-99",
+        "animation-name": "unset",
+        opacity: "0"
+      });
+      $("#qr_popup_window").css("display", "none");
+      $(".message_inbox_emoji_box_for_input_list").css("display", "none");
+    });
     // Show Clear Message Box
     $("#clear_message_box_history_xm28x3b28").click(function () {
       $("#delete_message").css("display", "inherit");
@@ -297,7 +297,7 @@ class chat_controller {
       $(".message_inbox_emoji_box_for_input_list").css("display", "none");
     });
     // Show User Profile
-      $("#view_profile_cn287x63").click(function () {
+    $("#view_profile_cn287x63").click(function () {
       $("#delete_message").css("display", "none");
       $("#view_profile_window").css("display", "inherit");
       menu_list_x983nx83 = 1;
@@ -311,7 +311,7 @@ class chat_controller {
       $(".message_inbox_emoji_box_for_input_list").css("display", "none");
     });
     // Message Box Client Username And Status
-      $(".message_box_navbar_top_client_information > span").click(function () {
+    $(".message_box_navbar_top_client_information > span").click(function () {
       $("#delete_message").css("display", "none");
       $("#view_profile_window").css("display", "inherit");
       menu_list_x983nx83 = 1;
@@ -330,34 +330,36 @@ class chat_controller {
       Isopen_view_profile_submenus = false;
       $("#view_profile_window").css("display", "none");
     });
-      $(".message_box_inbox_client_data_search_input").click(function () {
-          $(".popup_window").css("display", "none");
-          $("#view_profile_window").css("display", "none");
-          menu_list_x983nx83 = 1;
-          $("#more_message_box_navbar_top_list").css({
-              visibility: "hidden",
-              "z-index": "-99",
-              "animation-name": "unset",
-              opacity: "0"
-          });
-          $(".message_inbox_emoji_box_for_input_list").css("display", "none");
+    $(".message_box_inbox_client_data_search_input").click(function () {
+      $(".popup_window").css("display", "none");
+      $("#view_profile_window").css("display", "none");
+      menu_list_x983nx83 = 1;
+      $("#more_message_box_navbar_top_list").css({
+        visibility: "hidden",
+        "z-index": "-99",
+        "animation-name": "unset",
+        opacity: "0"
       });
-      $("#message_box_inbox_client_data_message_form_box_input").click(function () {
-          $(".popup_window").css("display", "none");
-          $("#view_profile_window").css("display", "none");
-          menu_list_x983nx83 = 1;
-          $("#more_message_box_navbar_top_list").css({
-              visibility: "hidden",
-              "z-index": "-99",
-              "animation-name": "unset",
-              opacity: "0"
-          });
-          $(".message_inbox_emoji_box_for_input_list").css("display", "none");
-      })
-    }
+      $(".message_inbox_emoji_box_for_input_list").css("display", "none");
+    });
+    $("#message_box_inbox_client_data_message_form_box_input").click(
+      function () {
+        $(".popup_window").css("display", "none");
+        $("#view_profile_window").css("display", "none");
+        menu_list_x983nx83 = 1;
+        $("#more_message_box_navbar_top_list").css({
+          visibility: "hidden",
+          "z-index": "-99",
+          "animation-name": "unset",
+          opacity: "0"
+        });
+        $(".message_inbox_emoji_box_for_input_list").css("display", "none");
+      }
+    );
+  }
   // Check Members In Message Box
   checkMembersData() {
-    if ($("#message_box_inbox_client_data_item li").length < 3) {
+    if ($("#message_box_inbox_client_data_item li").length < 4) {
       $(".chat_controler_cnm398").css("display", "none");
       $(".message_box_inbox_client_data_message_start_box").css(
         "display",
@@ -419,42 +421,61 @@ class chat_controller {
   }
   // Message Box Menu List Box
     messageBoxMenuList() {
-        $(".message_box_inbox_client_data_item_options > svg:first-child").click(function () {
-            if (document.body.clientWidth < 770) {
-                $("#message_box_inbox_client_data_item").css("display", "none");
-                //$(".mobile_menu").css("display", "none");
-                $(".chat_controler_cnm398").css({
-                    "display": "inital",
-                    "width": "100%",
-                    "max-width": "100%"
-                });
-                $("li[id='fullScreen'").css("display", "none");
-                $("#more_message_box_navbar_top_list").css("display", "none");
-                $(".mobile_menu").css("display", "none");
-                $(".message_box_inbox_client_data_message_start_box").css("display", "none");
-                $(".message_box_inbox_client_data_message_controller").css({ "display": "unset", "width": "100%", "max-width": "100%" });
-            }
-            document.getElementById("message_box_inbox_client_data").style.height = window.innerHeight + "px";
-            document.getElementById("message_box_inbox_client_data_message_chat").style.height = (window.innerHeight - 105) + "px";
-            document.getElementById("message_box_inbox_client_data_item").style.height = window.innerHeight + "px";
-            document.getElementById("message_box_inbox_client_data_message_controller").style.height = window.innerHeight + "px";
-            $(".chat_controler_cnm398").css({
-                "display": "initial",
-                "width": "100%",
-                "max-width": "100%"
-            });
-            $(".message_box_inbox_client_data_message_start_box").css("display", "none");
-        });
-        $("#back_up_main_chat_list").click(function () {
-            $(".chat_controler_cnm398").css({
-                "display": "none",
-                "width": "0%",
-                "max-width": "0%"
-            });
-            $(".message_box_inbox_client_data_message_controller").css({ "display": "none", "width": "0%", "max-width": "0%" });
-            $(".mobile_menu").css("display", "flex");
-            $("#message_box_inbox_client_data_item").css("display", "flex");
+        $(".message_box_inbox_client_data_private_box").click(function(){
+            $(".message_box_inbox_client_data_item_options > svg:first-child").click();
         })
+    $(".message_box_inbox_client_data_item_options > svg:first-child").click(
+      function () {
+        if (document.body.clientHeight < 770) {
+          $("#message_box_inbox_client_data_item").css("display", "none");
+          $(".chat_controler_cnm398").css({
+            display: "inital",
+            width: "100%",
+            "max-width": "100%"
+          });
+          $("li[id='fullScreen'").css("display", "none");
+          $(".mobile_menu").css("display", "none");
+          $(".message_box_inbox_client_data_message_start_box").css(
+            "display",
+            "none"
+          );
+          $(".message_box_inbox_client_data_message_controller").css({
+            display: "unset",
+            width: "100%",
+            "max-width": "100%"
+          });
+        }
+        document.getElementById("message_box_inbox_client_data").style.height =
+          window.innerHeight + "px";
+        document.getElementById(
+          "message_box_inbox_client_data_message_chat"
+        ).style.height = window.innerHeight - 105 + "px";
+        document.getElementById(
+          "message_box_inbox_client_data_item"
+        ).style.height = window.innerHeight + "px";
+        document.getElementById(
+          "message_box_inbox_client_data_message_controller"
+        ).style.height = window.innerHeight + "px";
+        $(".chat_controler_cnm398").css({
+          display: "initial",
+          width: "100%",
+          "max-width": "100%"
+        });
+        $(".message_box_inbox_client_data_message_start_box").css(
+          "display",
+          "none"
+        );
+      }
+    );
+    $("#back_up_main_chat_list").click(function () {
+      $("#message_box_inbox_client_data_item").css("display", "flex");
+      $(".message_box_inbox_client_data_message_controller").css(
+        "display",
+        "none"
+      );
+      $("li[id='fullScreen'").css("display", "initial");
+      $(".mobile_menu").css("display", "flex");
+    });
     $("#menu_list_x983nx83").click(function () {
       if (menu_list_x983nx83 == 1) {
         menu_list_x983nx83 = 0;
@@ -464,8 +485,8 @@ class chat_controller {
           "animation-name": "FadeIn",
           opacity: "1"
         });
-          $(".popup_window").css("display", "none");
-          $("#delete_message").css("display", "none");
+        $(".popup_window").css("display", "none");
+        $("#delete_message").css("display", "none");
         Isopen_view_profile_submenus = false;
         $(".message_inbox_emoji_box_for_input_list").css("display", "none");
       } else {

@@ -2,6 +2,7 @@ body[id="profile"] {
     background-color: var(--webpage-default-screen-color); /* PROFILE BACKGROUND PROPERTY */
     margin: 0px 0px 0px 0px;
     padding: 0px 0px 0px 0px;
+    overflow: hidden;
 }
 body[id="profile"]::-webkit-scrollbar {
     width: 8px;
@@ -18,12 +19,12 @@ body[id="profile"]::-webkit-scrollbar-button {
     user-select: none;
 }
 
-body[id="profile"]::-webkit-scrollbar-thumb {
-    background-color: rgba(30,30,30,0.2);
-    -moz-border-radius: 0px 0px 0px 0px;
-    -webkit-border-radius: 0px 0px 0px 0px;
-    border-radius: 0px 0px 0px 0px;
-}
+    body[id="profile"]::-webkit-scrollbar-thumb {
+        background-color: rgba(30,30,30,0.2);
+        -moz-border-radius: 50px 50px 50px 50px;
+        -webkit-border-radius: 50px 50px 50px 50px;
+        border-radius: 50px 50px 50px 50px;
+    }
 
 body[id="profile"]::-webkit-scrollbar-track {
     background-color: transparent;
@@ -31,15 +32,9 @@ body[id="profile"]::-webkit-scrollbar-track {
 .message_box {
     width: 100%;
     max-width: 100%;
-    -moz-border-radius: 20px 20px 20px 20px;
-    -webkit-border-radius: 20px 20px 20px 20px;
-    border-radius: 20px 20px 20px 20px;
 }
 .message_box_inbox {
     background-color: transparent;
-    -moz-border-radius: 20px 20px 20px 20px;
-    -webkit-border-radius: 20px 20px 20px 20px;
-    border-radius: 20px 20px 20px 20px;
 }
 /* __START MESSAGE BOX NAVBAR TOP PROPERTY */
 .message_box_navbar_top {
@@ -260,24 +255,24 @@ ul[id="message_box_inbox_client_data_item"] > li {
     display: inherit;
     padding: 10px 0px 10px 0px;
 }
-ul[id="message_box_inbox_client_data_item"] > li:first-child{
+ul[id="message_box_inbox_client_data_item"] > li:first-child {
     padding: 0px 0px 0px 0px;
     position: sticky;
     top: 0px;
     z-index: 99;
 }
-.message_box_inbox_client_data_search_box {
-    height: 60px;
-    background-color: var(--webpage-default-screen-color);
-    width: 100%;
-    text-align: center;
-    display: flex;
-    box-shadow: 0px 0.1px 1.5px rgb(217 217 217 / 90%);
-    align-items: center;
-    align-content: center;
-    flex-wrap: nowrap;
-    flex-direction: row;
-}
+        .message_box_inbox_client_data_search_box {
+        height: 60px;
+        background-color: var(--webpage-default-screen-color);
+        width: 100%;
+        text-align: center;
+        display: flex;
+        box-shadow: 0px 0.1px 1.5px rgb(217 217 217 / 90%);
+        align-items: center;
+        align-content: center;
+        flex-wrap: nowrap;
+        flex-direction: row;
+    }
 ul[id="message_box_inbox_client_data_item"] > li[class="message_box_inbox_client_data_contact_list"] {
     padding: 7px 7px 7px 7px;
     background-color: var(--webpage-default-background-color);
@@ -291,7 +286,6 @@ ul[id="message_box_inbox_client_data_item"] > li[class="message_box_inbox_client
     position: absolute;
     bottom: 10px;
     right: 10px;
-    z-index: 99;
 }
 ul[id="message_box_inbox_client_data_item"] > li[class="message_box_inbox_client_data_contact_list"]:hover {
     background-color: var(--webpage-default-background-color);
@@ -533,9 +527,9 @@ ul[id="message_box_inbox_client_data_item"] > li:hover {
 
 .message_box_inbox_client_data_message_chat::-webkit-scrollbar-thumb {
     background-color: rgb(230,230,230);
-/*    -moz-border-radius: 50px;
+    -moz-border-radius: 50px;
     -webkit-border-radius: 50px;
-    border-radius: 50px;*/
+    border-radius: 50px;
 }
 
 .message_box_inbox_client_data_message_chat::-webkit-scrollbar-track {
@@ -575,7 +569,20 @@ ul[id="message_box_inbox_client_data_item"] > li:hover {
         -moz-border-radius: 5px 5px 5px 5px;
         -webkit-border-radius: 5px 5px 5px 5px;
         border-radius: 5px 5px 5px 5px;
+        position: relative;
     }
+.message_box_inbox_client_data_message_chat_server > span:last-child::after {
+    position: absolute;
+    content: "";
+    width: 10px;
+    height: 8px;
+    right: -2px;
+    bottom: 0px;
+    background-color: #ffffff;
+    -moz-border-radius: 0px 7px 0px 0px;
+    -webkit-border-radius: 0px 7px 0px 0px;
+    border-radius: 0px 7px 0px 0px;
+}
 .message_box_inbox_client_data_message_chat > div > span:first-child{
     margin-top: 10px;
 }
@@ -619,7 +626,8 @@ ul[id="message_box_inbox_client_data_item"] > li:hover {
     width: 100%;
     max-width: 100%;
     border: 0px;
-    padding: 0px 2px 0px 2px;
+    height: 100%;
+    padding: 0px 0px 0px 0px;
     background-color: var(--webpage-default-screen-color);
     font-family: var(--webpage-default-font-name);
     font-size: 13px;
@@ -709,31 +717,6 @@ ul[id="message_box_inbox_client_data_item"] > li:hover {
 }
 .message_inbox_emoji_box_for_input_list > li:hover{
     background-color: #e8e8e8;
-}
-.message_inbox_emoji_box_for_input_list::-webkit-scrollbar {
-    width: 7px;
-    background-color: #eeeeee;
-}
-
-.message_inbox_emoji_box_for_input_list::-webkit-scrollbar-button {
-    background-color: transparent;
-    display: none;
-    outline: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    -webkit-user-select: none;
-    user-select: none;
-}
-
-.message_inbox_emoji_box_for_input_list::-webkit-scrollbar-thumb {
-    background-color: rgba(30,30,30,0.4);
-   /* -moz-border-radius: 50px 50px 50px 50px;
-    -webkit-border-radius: 50px 50px 50px 50px;
-    border-radius: 50px 50px 50px 50px;*/
-}
-
-.message_inbox_emoji_box_for_input_list::-webkit-scrollbar-track {
-    background-color: transparent;
 }
 .message_inbox_emoji_box_for_search_input {
     width: 100%;
@@ -869,9 +852,9 @@ ul[id="message_box_inbox_client_data_item"] > li:hover {
     -moz-border-radius: 5px 5px 5px 5px;
     -webkit-border-radius: 5px 5px 5px 5px;
     border-radius: 5px 5px 5px 5px;
-    -moz-box-shadow: inset 0px 0px 5px #d4d4d4;
-    -webkit-box-shadow: inset 0px 0px 5px #d4d4d4;
-    box-shadow: inset 0px 0px 5px #d4d4d4;
+    -moz-box-shadow: inset 0px 0px 2px #d4d4d4;
+    -webkit-box-shadow: inset 0px 0px 2px #d4d4d4;
+    box-shadow: inset 0px 0px 2px #d4d4d4;
 }
 .view_profile_menus > li[class="view_profile_menus_break_line"] {
     padding: 0px 0px 0px 0px;
@@ -1110,12 +1093,6 @@ ul[id="message_box_inbox_client_data_item"] > li:hover {
 
 /* __START MOBILE MENU NAVIGATION BAR */
 .mobile_menu {
-    -moz-transition: 0.3s;
-    -o-transition: 0.3s;
-    -webkit-transition: 0.3s;
-    transition: 0.3s;
     display: none;
     position: sticky;
 }
-
-/* __END MOBILE MENU NAVIGATION BAR */
